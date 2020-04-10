@@ -1,4 +1,4 @@
-package com.crazzy.spring.documentation;
+package com.spring.documentation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
