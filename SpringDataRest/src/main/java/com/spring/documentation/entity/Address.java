@@ -1,10 +1,10 @@
 package com.spring.documentation.entity;
 
 import lombok.*;
+import net.minidev.json.annotate.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
-import java.util.*;
 
 @Entity
 @Getter
@@ -13,21 +13,26 @@ import java.util.*;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode
-public class Employee {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    private String name;
+    private String street;
 
     @NotNull
-    private String title;
+    private String city;
 
     @NotNull
-    private String department;
+    private String state;
+
+    @NotNull
+    private String contrary;
 
     @OneToOne
-    private Address address;
+    @JoinColumn(name = "employee_id")
+    @JsonIgnore
+    private Employee employee;
 }
