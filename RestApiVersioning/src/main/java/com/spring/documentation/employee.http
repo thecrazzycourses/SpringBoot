@@ -1,0 +1,31 @@
+### Home API with URI Versioning
+GET http://localhost:8080/api/v1/home
+Accept:  application/json
+
+### Home API V1 with Custom Header Versioning, we dont require v1 in URI path in this case
+GET http://localhost:8080/api/v1/home
+Accept:  application/json
+Accept-version: v1
+
+### Home API V2 with Custom Header Versioning, we dont require v1 in URI path in this case
+GET http://localhost:8080/api/v1/home
+Accept:  application/json
+Accept-version: v2
+
+### Actuator Health Endpoint
+GET http://localhost:8080/actuator/health
+Accept:  application/json
+
+### Add New Employee
+POST http://localhost:8080/api/v1/employees
+Content-Type: application/json
+
+{
+  "name": "Rahul Choudhary",
+  "title": "Software Developer",
+  "department": "IT"
+}
+
+### Employees API
+GET http://localhost:8080/api/v1/employees
+Accept:  application/json
