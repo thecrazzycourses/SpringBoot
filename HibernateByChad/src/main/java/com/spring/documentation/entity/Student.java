@@ -61,4 +61,21 @@ public class Student {
     @MapKeyColumn(name = "sport_key")
     @Column(name = "sport_value")
     private Map<String, String > sports = new HashMap<>();
+
+    /**
+     * Sorted Map
+     * Order will not be preserved and dont allow key duplicates but allow value duplicates
+     */
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "laptop")
+    @MapKeyColumn(name = "laptop_key")
+    @Column(name = "laptop_value")
+    @OrderBy
+    private SortedMap<String, String> laptops = new TreeMap<>();
+
+    @Embedded
+    private Address studentAddress;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 }

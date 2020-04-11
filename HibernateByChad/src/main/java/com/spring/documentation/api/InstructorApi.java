@@ -27,9 +27,16 @@ public class InstructorApi {
         Review review2 = Review.builder().comment("This course is awesome").build();
         Review review3 = Review.builder().comment("Will give 5 star to this project").build();
 
+        // create address
+        Address studentAddress = Address.builder().street("G 502 Mapsko Paradise").city("Gurgoan").zipcode("122004").build();
+
         // create students
-        Student student1 = Student.builder().firstName("Akash").lastName("Sharma").email("akash@gmail.com").build();
-        Student student2 = Student.builder().firstName("Niras").lastName("Sharma").email("niras@gmail.com").build();
+        Student student1 = Student.builder().firstName("Akash").lastName("Sharma").email("akash@gmail.com")
+                .status(Status.ACTIVE).build();
+        Student student2 = Student.builder().firstName("Niras").lastName("Sharma").email("niras@gmail.com")
+                .status(Status.ACTIVE).build();
+
+        student1.setStudentAddress(studentAddress);
 
         // create courses
         Course javaCourse = Course.builder().title("Java").build();

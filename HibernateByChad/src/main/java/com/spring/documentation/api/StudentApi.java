@@ -69,6 +69,14 @@ public class StudentApi {
         sports.put("Badminton", "Need Racket and Shuttle");
         byId.get().setSports(sports);
 
+        // create laptops
+        SortedMap<String, String> laptops = new TreeMap<>();
+        laptops.put("Dell", "Good performance and price is with range");
+        laptops.put("HP", "Only use Z-Book");
+        laptops.put("Lenovo", "Didnt tried yet");
+        laptops.put("Mac", "Cost is too high");
+        byId.get().setLaptops(laptops);
+
         studentRepository.save(byId.get());
 
         return byId.get();
