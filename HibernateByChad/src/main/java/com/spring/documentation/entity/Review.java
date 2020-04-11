@@ -10,7 +10,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 public class Review {
 
     @Id

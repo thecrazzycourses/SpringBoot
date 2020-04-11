@@ -12,7 +12,6 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 public class Instructor {
 
     @Id

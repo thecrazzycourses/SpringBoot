@@ -14,9 +14,11 @@ import java.util.*;
 public class CourseApi {
 
     private final CourseRepository courseRepository;
+    private final InstructorRepository instructorRepository;
 
-    public CourseApi(CourseRepository courseRepository) {
+    public CourseApi(CourseRepository courseRepository, InstructorRepository instructorRepository) {
         this.courseRepository = courseRepository;
+        this.instructorRepository = instructorRepository;
     }
 
     @GetMapping("/{id}")
@@ -28,6 +30,13 @@ public class CourseApi {
     @GetMapping
     public ResponseEntity findAll() {
         List<Course> all = courseRepository.findAll();
+        return new ResponseEntity(all, HttpStatus.FOUND);
+    }
+
+    @GetMapping("/instructor/{id}")
+    public ResponseEntity findAllByInstructorId(@PathVariable String id) {
+        Optional<Instructor> byId = instructorRepository.findById(Long.parseLong(id));
+        List<Course> all = courseRepository.findAllByInstructor(byId.get());
         return new ResponseEntity(all, HttpStatus.FOUND);
     }
 

@@ -28,8 +28,8 @@ public class InstructorApi {
         Review review3 = Review.builder().comment("Will give 5 star to this project").build();
 
         // create students
-        Student student1 = Student.builder().firstName("Akash").lastName("Sharma").build();
-        Student student2 = Student.builder().firstName("Niras").lastName("Sharma").build();
+        Student student1 = Student.builder().firstName("Akash").lastName("Sharma").email("akash@gmail.com").build();
+        Student student2 = Student.builder().firstName("Niras").lastName("Sharma").email("niras@gmail.com").build();
 
         // create courses
         Course javaCourse = Course.builder().title("Java").build();

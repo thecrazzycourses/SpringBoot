@@ -1,5 +1,6 @@
 package com.spring.documentation.entity;
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,7 +12,6 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 public class Course {
 
     @Id
@@ -22,12 +22,14 @@ public class Course {
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "instructor")
+    @JsonIgnore
     private Instructor instructor;
 
     /**
      * One To Many Uni Directional : Course can have multiple reviews
      * Course --> OneToMany --> Reviews
      * FetchType is EAGER
+     * Fetching all Reviews with the course
      *
      */
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -46,10 +48,11 @@ public class Course {
      * Course can have multiple students
      * We are defining this relationship on course side so student will be inverse
      */
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinTable(name = "course_student",
             joinColumns = @JoinColumn(name = "course_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
+    @JsonIgnore
     private List<Student> students;
 
     // convenience method for bi-direction relationship
