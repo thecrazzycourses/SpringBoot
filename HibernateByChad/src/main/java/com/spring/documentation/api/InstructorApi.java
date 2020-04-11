@@ -34,7 +34,7 @@ public class InstructorApi {
         Student student1 = Student.builder().firstName("Akash").lastName("Sharma").email("akash@gmail.com")
                 .status(Status.ACTIVE).build();
         Student student2 = Student.builder().firstName("Niras").lastName("Sharma").email("niras@gmail.com")
-                .status(Status.ACTIVE).build();
+                .status(Status.INACTIVE).build();
 
         student1.setStudentAddress(studentAddress);
 
