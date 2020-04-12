@@ -13,6 +13,11 @@ import java.util.*;
 @RequestMapping("/table-per-class")
 public class TablePerClassInheritanceApi {
 
+    /**
+     * Quite Decent Performance with Normalized Database
+     * Data Integrity with Not Null
+     */
+
     private final AnimalRepository animalRepository;
     private final MonkeyRepository monkeyRepository;
     private final DonkeyRepository donkeyRepository;

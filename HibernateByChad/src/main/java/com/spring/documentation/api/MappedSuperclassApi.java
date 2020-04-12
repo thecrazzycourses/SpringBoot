@@ -13,6 +13,13 @@ import java.util.*;
 @RequestMapping("/mapped-superclass")
 public class MappedSuperclassApi {
 
+    /**
+     * High Performance with Normalized Database
+     * Data Integrity with Not Null
+     * No direct support for Super Class we nee to write HQL which result in many joins
+     * 
+     */
+
     private final LogUserRepository logUserRepository;
 
     public MappedSuperclassApi(LogUserRepository logUserRepository) {

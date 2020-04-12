@@ -13,6 +13,11 @@ import java.util.*;
 @RequestMapping("/joined-table")
 public class JoinedTableApi {
 
+    /**
+     * No High Performance with Normalized Database
+     * Data Integrity with Not Null
+     */
+
     private final SchoolRepository schoolRepository;
     private final TeacherRepository teacherRepository;
     private final PrincipalRepository principalRepository;

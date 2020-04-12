@@ -13,6 +13,11 @@ import java.util.*;
 @RequestMapping("/single-table")
 public class SingleTableInheritanceApi {
 
+    /**
+     * High Performance with No Normalized Database
+     * No Data Integrity with Not Null
+     */
+
     private final EmployeeRepository employeeRepository;
     private final ManagerRepository managerRepository;
     private final UserRepository userRepository;
