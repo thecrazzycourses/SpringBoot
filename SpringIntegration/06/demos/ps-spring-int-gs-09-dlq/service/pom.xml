@@ -55,7 +55,7 @@
             <!-- Jakarta EE JavaMail reference implementation; see: https://eclipse-ee4j.github.io/mail/ -->
             <groupId>com.sun.mail</groupId>
             <artifactId>jakarta.mail</artifactId>
-            <version>1.6.4</version>
+            <version>1.6.7</version>
             <scope>runtime</scope>
         </dependency>
 
