@@ -103,7 +103,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.0.4.RELEASE</version>
+			<version>5.2.24.RELEASE</version>
 		</dependency>
 
 		<!-- Spring JDBC -->
@@ -133,7 +133,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.0.4.RELEASE</version>
+			<version>5.2.24.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -470,7 +470,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<execute></execute>
+										<execute/>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -490,7 +490,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
