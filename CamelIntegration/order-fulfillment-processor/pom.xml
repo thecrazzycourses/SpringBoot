@@ -96,14 +96,14 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>4.0.4.RELEASE</version>
+			<version>5.3.33</version>
 		</dependency>
 
 		<!-- Spring MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.0.4.RELEASE</version>
+			<version>5.3.33</version>
 		</dependency>
 
 		<!-- Spring JDBC -->
@@ -470,7 +470,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<execute></execute>
+										<execute/>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -490,7 +490,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
